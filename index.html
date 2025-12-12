@@ -1,115 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ID</title>
 
     <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(
+          180deg,
+          #001f3d 0%,
+          #ed985f 50%,
+          #e6e6e6 100%
+        );
+        display: flex;
+        justify-content: center;
+        padding: 140px;
+      }
+
+      .profile-card {
+        width: 290px;
+        background: #1b211a;
+        color: #fff;
+        border-radius: 25px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .profile-img img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .profile-info {
+        padding: 20px;
+      }
+
+      .profile-info h2 {
+        font-size: 19px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+
+      .badge {
+        background: #00c853;
+        color: #fff;
+        padding: 3px 6px;
+        border-radius: 50%;
+        font-size: 12px;
+      }
+
+      .profile-info p {
+        font-size: 14px;
+        opacity: 0.8;
+        margin-top: 8px;
+      }
+
+      .stats {
+        display: flex;
+        gap: 20px;
+        margin: 15px 0;
+        font-size: 14px;
+        opacity: 0.9;
+      }
+
+      .follow-button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 12px;
+        background: #fff;
+        color: #000;
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .follow-button:hover {
+        background: #67b2d8;
+      }
+
+      .glass {
+        background: rgba(20, 20, 20, 0.6);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      @media (max-width: 480px) {
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(180deg,#001f3d 0%, #ed985f 50%, #e6e6e6 100%);
-            display: flex;
-            justify-content: center;
-            padding: 140px;
+          padding: 40px;
         }
 
         .profile-card {
-            width: 290px;
-            background: #1b211a;
-            color: #fff;
-            border-radius: 25px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-
-        .profile-img img {
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .profile-info {
-            padding: 20px;
+          width: 90%;
+          border-radius: 20px;
         }
 
         .profile-info h2 {
-            font-size: 19px;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            flex-wrap: wrap;
-        }
-
-        .badge {
-            background: #00c853;
-            color: #fff;
-            padding: 3px 6px;
-            border-radius: 50%;
-            font-size: 12px;
+          font-size: 17px;
         }
 
         .profile-info p {
-            font-size: 14px;
-            opacity: 0.8;
-            margin-top: 8px;
-        }
-
-        .stats {
-            display: flex;
-            gap: 20px;
-            margin: 15px 0;
-            font-size: 14px;
-            opacity: 0.9;
+          font-size: 13px;
         }
 
         .follow-button {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 12px;
-            background: #fff;
-            color: #000;
-            font-size: 15px;
-            cursor: pointer;
-            transition: 0.3s;
+          font-size: 14px;
+          padding: 9px;
         }
-
-        .follow-button:hover {
-            background: #67b2d8;
-        }
-
-        /* Glass effect */
-        .glass {
-            background: rgba(20,20,20,0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255,255,255,0.1);
-        }
+      }
     </style>
-
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- Add class 'glass' here if you want glass styling -->
     <div class="profile-card">
-        <div class="profile-img">
-            <img src="profile.jpg" alt="Profile">
+      <div class="profile-img">
+        <img src="profile.jpg" alt="Profile" />
+      </div>
+
+      <div class="profile-info">
+        <h2>Sai Sravanthi Kondaviti <span class="badge">✔</span></h2>
+        <p>
+          Actively seeking knowledge and focused on simplicity and usability.
+        </p>
+
+        <div class="stats">
+          <div>👥 400</div>
+          <div>📁 48</div>
         </div>
 
-        <div class="profile-info">
-            <h2>Sai Sravanthi Kondaviti <span class="badge">✔</span></h2>
-            <p>Actively seeking knowledge and focused on simplicity and usability.</p>
-
-            <div class="stats">
-                <div>👥 400</div>
-                <div>📁 48</div>
-            </div>
-
-            <button class="follow-button">Follow +</button>
-        </div>
+        <button class="follow-button">Follow +</button>
+      </div>
     </div>
-
-</body>
+  </body>
 </html>
